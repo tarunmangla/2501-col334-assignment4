@@ -101,6 +101,7 @@ def run(expname):
                     start_time = time.time()
                     
                     h1.cmd(f"python3 p1_server.py {SERVER_IP} {SERVER_PORT} {SWS} &")
+                    time.sleep(1)
                     result = h2.cmd(f"python3 p1_client.py {SERVER_IP} {SERVER_PORT}")
                     end_time = time.time()
                     ttc = end_time - start_time
